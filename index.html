@@ -41,7 +41,10 @@
 <body>
     <img src="icon.png" class="icon" alt="Butterup Toast Icon">
     <div class="buttonCenter">
-        <div class="button" onclick="butterup.toast()">
+        <div class="button" onclick="butterup.toast({
+            title: 'Event Created',
+            message: 'A new event has been created for Monday, January 6th at 06:00pm',
+        });">
             Spawn Toast
         </div>
     </div>

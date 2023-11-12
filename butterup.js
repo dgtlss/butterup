@@ -4,7 +4,7 @@ var butterup = {
         toastLife: 5000, // How long a toast will stay on the screen before fading away
         currentToasts: 0, // Current number of toasts on the screen
     },
-    toast:function(title, message, type, location, icon, customIcon){
+    toast:function({title, message, type, location, icon, customIcon}){
         // we need to spawn the toaster inside the body depending on the location specified. If no location is specified then we spawn in the top-right by default
         // the div has an ol inside of it with a class of rack. each li inside of this has a class of butteruptoast
         
@@ -36,8 +36,8 @@ var butterup = {
         // Check if there are too many toasts on the screen
         if(butterup.options.currentToasts >= butterup.options.maxToasts){
             // there are too many toasts on the screen, delete the oldest one
-            var oldestToast = rack.firstChild;
-            rack.removeChild(oldestToast);
+            var oldestToast = document.getElementById('butterupRack').firstChild;
+            removeChild(oldestToast);
             butterup.options.currentToasts--;
         }
 
@@ -59,6 +59,32 @@ var butterup = {
         
         // Add the toast to the rack
         document.getElementById('butterupRack').appendChild(toast);
+
+        // add a div inside the toast with a class of notif
+        const toastNotif = document.createElement('div');
+        toastNotif.className = 'notif';
+        toast.appendChild(toastNotif);
+
+        // add a div inside of notif with a class of desc
+        const toastDesc = document.createElement('div');
+        toastDesc.className = 'desc';
+        toastNotif.appendChild(toastDesc);
+
+        if(title != null){
+            const toastTitle = document.createElement('div');
+            toastTitle.className = 'title';
+            toastTitle.innerHTML = title;
+            toastDesc.appendChild(toastTitle);
+        }
+
+        if(message != null){
+            const toastMessage = document.createElement('div');
+            toastMessage.className = 'message';
+            toastMessage.innerHTML = message;
+            toastDesc.appendChild(toastMessage);
+        }
+
+
 
         // remove the entrance animation class after the animation has finished
         setTimeout(function(){
