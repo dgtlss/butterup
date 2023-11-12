@@ -46,6 +46,9 @@ ol.rack{
     list-style: none;
     padding: 0;
     margin: 0;
+    /* reverse the list order so that the newest items are at the top */
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 ol.rack li{
@@ -133,3 +136,58 @@ ol.rack li{
     color: hsl(210, 100%, 27%);
     border: solid 1px hsl(210, 92%, 91%);
 }
+
+
+/* Entrance animations */
+/*  Note: These animations need to differ depending on the location of the toaster
+    Elements that are in the top should slide and fade down from the top
+    Elemennts that are in the bottom should slide and fade up from the bottom
+*/
+
+#toaster.top-right .butteruptoast{
+    animation: slideDown 0.5s ease-in-out;
+}
+
+#toaster.top-left .butteruptoast{
+    animation: slideDown 0.5s ease-in-out;
+}
+
+#toaster.top-center .butteruptoast{
+    animation: slideDown 0.5s ease-in-out;
+}
+
+#toaster.bottom-right .butteruptoast{
+    animation: slideUp 0.5s ease-in-out;
+}
+
+#toaster.bottom-left .butteruptoast{
+    animation: slideUp 0.5s ease-in-out;
+}
+
+#toaster.bottom-center .butteruptoast{
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+```
+```
