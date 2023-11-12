@@ -144,28 +144,12 @@ ol.rack li{
     Elemennts that are in the bottom should slide and fade up from the bottom
 */
 
-#toaster.top-right .butteruptoast{
-    animation: slideDown 0.5s ease-in-out;
-}
-
-#toaster.top-left .butteruptoast{
-    animation: slideDown 0.5s ease-in-out;
-}
-
-#toaster.top-center .butteruptoast{
-    animation: slideDown 0.5s ease-in-out;
-}
-
-#toaster.bottom-right .butteruptoast{
+.toastUp{
     animation: slideUp 0.5s ease-in-out;
 }
 
-#toaster.bottom-left .butteruptoast{
-    animation: slideUp 0.5s ease-in-out;
-}
-
-#toaster.bottom-center .butteruptoast{
-    animation: slideUp 0.5s ease-in-out;
+.toastDown{
+    animation: slideDown 0.5s ease-in-out;
 }
 
 @keyframes slideDown {

@@ -45,6 +45,13 @@ var butterup = {
         const toast = document.createElement('li');
         butterup.options.currentToasts++;
         toast.className = 'butteruptoast';
+        // if the toast class contains a top or bottom location, add the appropriate class to the toast
+        if(toaster.className.includes('top-right') || toaster.className.includes('top-center') || toaster.className.includes('top-left')){
+            toast.className += ' toastDown';
+        }
+        if(toaster.className.includes('bottom-right') || toaster.className.includes('bottom-center') || toaster.className.includes('bottom-left')){
+            toast.className += ' toastUp';
+        }
         toast.id = 'butterupToast-' + butterup.options.currentToasts;
         if(type != null){
             toast.className += ' ' + type;
@@ -52,6 +59,12 @@ var butterup = {
         
         // Add the toast to the rack
         document.getElementById('butterupRack').appendChild(toast);
+
+        // remove the entrance animation class after the animation has finished
+        setTimeout(function(){
+            toast.className = toast.className.replace(' toastDown', '');
+            toast.className = toast.className.replace(' toastUp', '');
+        }, 500);
 
         // despawn the toast after the specified time
         setTimeout(function(){
@@ -62,7 +75,10 @@ var butterup = {
     despawnToast(toastId){
         // fade out the toast and then remove it from the DOM
         var toast = document.getElementById(toastId);
+        toast.className += ' fadeOutToast';
         setTimeout(function(){
+            // set the opacity to 0
+            toast.style.opacity = '0';
             toast.parentNode.removeChild(toast);
             butterup.options.currentToasts--;
 
