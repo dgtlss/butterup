@@ -43,6 +43,7 @@ var butterup = {
 
         // Create the toast
         const toast = document.createElement('li');
+        butterup.options.currentToasts++;
         toast.className = 'butteruptoast';
         toast.id = 'butterupToast-' + butterup.options.currentToasts;
         if(type != null){
@@ -51,7 +52,27 @@ var butterup = {
         
         // Add the toast to the rack
         document.getElementById('butterupRack').appendChild(toast);
+
+        // despawn the toast after the specified time
+        setTimeout(function(){
+            butterup.despawnToast(toast.id);
+        }, butterup.options.toastLife);
         
+    },
+    despawnToast(toastId){
+        // fade out the toast and then remove it from the DOM
+        var toast = document.getElementById(toastId);
+        setTimeout(function(){
+            toast.parentNode.removeChild(toast);
+            butterup.options.currentToasts--;
+
+            // if this was the last toast on the screen, remove the toaster
+            if(butterup.options.currentToasts == 0){
+                console.log('no more toasts');
+                var toaster = document.getElementById('toaster');
+                toaster.parentNode.removeChild(toaster);
+            }
+        }, 500);
     }
 }
 
