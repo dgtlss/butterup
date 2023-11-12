@@ -5,18 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Butterup Example Page</title>
     <link rel="stylesheet" href="butterup.css">
+    <style>
+        body{
+            background-color: #f2f3ee;
+        }
+        img.icon{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
+    <img src="icon.png" class="icon" alt="Butterup Toast Icon">
     <div class="toaster bottom-right">
         <ol class="rack">
             <li class="butteruptoast">
-                <div class="icon">
+                <!-- <div class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 3c-4.31 0-8 3.033-8 7 0 2.024.978 3.825 2.499 5.085a3.478 3.478 0 01-.522 1.756.75.75 0 00.584 1.143 5.976 5.976 0 003.936-1.108c.487.082.99.124 1.503.124 4.31 0 8-3.033 8-7s-3.69-7-8-7zm0 8a1 1 0 100-2 1 1 0 000 2zm-2-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
                     </svg>
-                </div>
+                </div> -->
                 <div class="notif">
-                    Notification with icon!
+                    Event has been created!
+                </div>
+            </li>
+            <li class="butteruptoast">
+                <div class="notif">
+                    <div class="desc">
+                        <div class="title">Event has been created</div>
+                        <div class="message">Monday, January 6th at 06:00pm</div>
+                    </div>
                 </div>
             </li>
             <li class="butteruptoast success">
@@ -64,7 +84,7 @@
 
     <div class="toaster bottom-center">
         <ol class="rack">
-            Bottom Center
+            
         </ol>
     </div>
     <script src="butterup.js"></script>
