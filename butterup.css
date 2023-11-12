@@ -42,13 +42,36 @@
     transform: translateX(-50%);
 }
 
+.toaster.top-center ol.rack{
+    flex-direction: column-reverse;
+}
+
+.toaster.top-left ol.rack{
+    flex-direction: column-reverse;
+}
+
+.toaster.top-right ol.rack{
+    flex-direction: column-reverse;
+}
+
+.toaster.bottom-center ol.rack{
+    flex-direction: column;
+}
+
+.toaster.bottom-left ol.rack{
+    flex-direction: column;
+}
+
+.toaster.bottom-right ol.rack{
+    flex-direction: column;
+}
+
 ol.rack{
     list-style: none;
     padding: 0;
     margin: 0;
     /* reverse the list order so that the newest items are at the top */
     display: flex;
-    flex-direction: column-reverse;
 }
 
 ol.rack li{
