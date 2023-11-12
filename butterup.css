@@ -146,10 +146,12 @@ ol.rack li{
 
 .toastUp{
     animation: slideUp 0.5s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .toastDown{
     animation: slideDown 0.5s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes slideDown {
@@ -176,6 +178,7 @@ ol.rack li{
 
 .fadeOutToast{
     animation: fadeOut 0.3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
