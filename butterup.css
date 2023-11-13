@@ -94,30 +94,30 @@ ol.rack li{
     cursor: pointer;
 }
 
-.icon{
+.notif .desc .icon{
     display: flex;
     align-items: center;
 }
 
-.icon svg{
+.notif .desc .icon svg{
     width: 20px;
     height: 20px;
     fill: #282828;
 }
 
-.desc{
+.notif .desc{
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.desc .title{
+.notif .desc .title{
     font-weight: 500;
     line-height: 1.5;
 
 }
 
-.desc .message{
+.notif .desc .message{
     font-weight: 400;
     line-height: 1.4;
 }
