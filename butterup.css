@@ -90,6 +90,7 @@ ol.rack li{
     gap: 6px;
     color: #282828;
     width: 325px;
+    cursor: pointer;
 }
 
 .icon{

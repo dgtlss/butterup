@@ -5,7 +5,7 @@ var butterup = {
         currentToasts: 0, // Current number of toasts on the screen
         stackedToasts: false // Whether or not to stack toasts
     },
-    toast:function({title, message, type, location, icon, customIcon}){        
+    toast:function({title, message, type, location, icon, customIcon, dismissable}){        
         /* Check if the toaster exists. If it doesn't, create it. If it does, check if there are too many toasts on the screen.
         If there are too many, delete the oldest one and create a new one. If there aren't too many, create a new one. */
         if(document.getElementById('toaster') == null){
@@ -118,6 +118,13 @@ var butterup = {
             toastMessage.className = 'message';
             toastMessage.innerHTML = message;
             toastDesc.appendChild(toastMessage);
+        }
+
+        if(dismissable != null && dismissable == true){
+            // when the item is clicked on, remove it from the DOM
+            toast.addEventListener('click', function(){
+                butterup.despawnToast(toast.id);
+            });
         }
 
         // remove the entrance animation class after the animation has finished
