@@ -94,12 +94,12 @@ ol.rack li{
     cursor: pointer;
 }
 
-.notif .desc .icon{
+.butteruptoast .icon{
     display: flex;
     align-items: center;
 }
 
-.notif .desc .icon svg{
+.butteruptoast .icon svg{
     width: 20px;
     height: 20px;
     fill: #282828;
