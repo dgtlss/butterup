@@ -121,6 +121,8 @@ var butterup = {
         }
 
         if(dismissable != null && dismissable == true){
+            // Add a class to the toast to make it dismissable
+            toast.className += ' dismissable';
             // when the item is clicked on, remove it from the DOM
             toast.addEventListener('click', function(){
                 butterup.despawnToast(toast.id);

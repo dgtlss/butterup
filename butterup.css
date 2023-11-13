@@ -91,7 +91,11 @@ ol.rack li{
     gap: 6px;
     color: #282828;
     width: 325px;
+}
+
+.butteruptoast.dismissable{
     cursor: pointer;
+
 }
 
 .butteruptoast .icon{
