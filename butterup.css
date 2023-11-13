@@ -8,6 +8,7 @@
     outline: none;
     z-index: 999999999;
     position: fixed;
+    padding: 5px;
 }
 
 .toaster.bottom-right{
