@@ -28,6 +28,18 @@ var butterup = {
             }
         }else{
             const toaster = document.getElementById('toaster');
+            // check what location the toaster is in
+            toaster.classList.forEach(function(item){
+                // remove any location classes from the toaster
+                if(item.includes('top-right') || item.includes('top-center') || item.includes('top-left') || item.includes('bottom-right') || item.includes('bottom-center') || item.includes('bottom-left')){
+                    toaster.classList.remove(item);
+                }
+            });
+            if(location == null){
+                toaster.className = 'toaster top-right';
+            }else{
+                toaster.className = 'toaster ' + location;
+            }
             const rack = document.getElementById('butterupRack');
         }
 
