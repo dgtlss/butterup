@@ -229,6 +229,7 @@ ol.rack li{
 .butteruptoast.glass{
     background-color: rgba(255, 255, 255, 0.6) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
     box-shadow: 0 4px 12px #0000001a;
     color: #282828;
@@ -237,6 +238,7 @@ ol.rack li{
 .butteruptoast.glass.success{
     background-color: rgba(235, 254, 242, 0.6) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
     box-shadow: 0 4px 12px #0000001a;
     color: hsl(140, 100%, 27%);
@@ -245,6 +247,7 @@ ol.rack li{
 .butteruptoast.glass.error{
     background-color: rgba(254, 240, 240, 0.6) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
     box-shadow: 0 4px 12px #0000001a;
     color: hsl(0, 100%, 27%);
@@ -253,6 +256,7 @@ ol.rack li{
 .butteruptoast.glass.warning{
     background-color: rgba(255, 253, 240, 0.6) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
     box-shadow: 0 4px 12px #0000001a;
     color: hsl(50, 100%, 27%);
@@ -261,6 +265,7 @@ ol.rack li{
 .butteruptoast.glass.info{
     background-color: rgba(240, 248, 255, 0.6) !important;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
     box-shadow: 0 4px 12px #0000001a;
     color: hsl(210, 100%, 27%);
