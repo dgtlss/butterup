@@ -218,3 +218,51 @@ ol.rack li{
         opacity: 0;
     }
 }
+
+/*  Additional Styles 
+    These styles are an alternative to the standard option. A user can choose to use these
+    styles by setting the theme: variable per toast
+*/
+
+/* Glass */
+
+.butteruptoast.glass{
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px #0000001a;
+    color: #282828;
+}
+
+.butteruptoast.glass.success{
+    background-color: rgba(235, 254, 242, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px #0000001a;
+    color: hsl(140, 100%, 27%);
+}
+
+.butteruptoast.glass.error{
+    background-color: rgba(254, 240, 240, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px #0000001a;
+    color: hsl(0, 100%, 27%);
+}
+
+.butteruptoast.glass.warning{
+    background-color: rgba(255, 253, 240, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px #0000001a;
+    color: hsl(50, 100%, 27%);
+}
+
+.butteruptoast.glass.info{
+    background-color: rgba(240, 248, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: 0 4px 12px #0000001a;
+    color: hsl(210, 100%, 27%);
+}
+

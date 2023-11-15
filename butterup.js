@@ -5,7 +5,7 @@ var butterup = {
         currentToasts: 0, // Current number of toasts on the screen
         stackedToasts: false // Whether or not to stack toasts
     },
-    toast:function({title, message, type, location, icon, customIcon, dismissable}){        
+    toast:function({title, message, type, location, icon, theme, customIcon, dismissable}){        
         /* Check if the toaster exists. If it doesn't, create it. If it does, check if there are too many toasts on the screen.
         If there are too many, delete the oldest one and create a new one. If there aren't too many, create a new one. */
         if(document.getElementById('toaster') == null){
@@ -65,6 +65,10 @@ var butterup = {
         toast.id = 'butterupToast-' + butterup.options.currentToasts;
         if(type != null){
             toast.className += ' ' + type;
+        }
+
+        if(theme != null){
+            toast.className += ' ' + theme;
         }
         
         // Add the toast to the rack
