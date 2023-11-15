@@ -271,3 +271,44 @@ ol.rack li{
     color: hsl(210, 100%, 27%);
 }
 
+/* brutalist */
+.butteruptoast.brutalist{
+    border-radius: 0px;
+    box-shadow: 0 4px 12px #0000001a;
+    border: solid 2px #282828;
+    font-size: 13px;
+    align-items: center;
+    display: flex;
+    padding: 16px;
+    background-color: white;
+    gap: 6px;
+    color: #282828;
+    width: 325px;
+}
+
+.butteruptoast.brutalist.success{
+    background-color: #ebfef2;
+    color: hsl(140, 100%, 27%);
+    border: solid 2px hsl(140, 100%, 27%);
+}
+
+.butteruptoast.brutalist.error{
+    background-color: #fef0f0;
+    color: hsl(0, 100%, 27%);
+    border: solid 2px hsl(0, 100%, 27%);
+}
+
+.butteruptoast.brutalist.warning{
+    background-color: #fffdf0;
+    color: hsl(50, 100%, 27%);
+    border: solid 2px hsl(50, 100%, 27%);
+}
+
+.butteruptoast.brutalist.info{
+    background-color: #f0f8ff;
+    color: hsl(210, 100%, 27%);
+    border: solid 2px hsl(210, 100%, 27%);
+}
+
+
+
