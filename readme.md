@@ -6,3 +6,14 @@ This Vanilla JavaScript toast notification plugin is designed to seamlessly inte
 ## Documentation
 
 For full documentation, visit [butterup.nlanger.dev](https://butterup.nlanger.dev)
+
+## Licensing
+
+Butterup is proudly open source and is distributed under the MIT License. This means you have full freedom to modify, distribute, and use it in your projects, whether they're commercial or personal. The MIT License is one of the most permissive and flexible open-source licenses, which encourages wide adoption and collaborative improvement.
+
+## Contributing
+
+We welcome contributions from the community! If you have improvements or bug fixes, feel free to fork the repository, make your changes, and submit a pull request. Let's make this project better together!
+
+
+
