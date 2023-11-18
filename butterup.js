@@ -169,7 +169,6 @@ var butterup = {
 
             // if this was the last toast on the screen, remove the toaster
             if(butterup.options.currentToasts == 0){
-                console.log('no more toasts');
                 var toaster = document.getElementById('toaster');
                 toaster.parentNode.removeChild(toaster);
             }
