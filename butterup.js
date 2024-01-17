@@ -160,21 +160,25 @@ var butterup = {
     despawnToast(toastId){
         // fade out the toast and then remove it from the DOM
         var toast = document.getElementById(toastId);
-        toast.className += ' fadeOutToast';
-        setTimeout(function(){
-            // set the opacity to 0
-            try{
-                toast.style.opacity = '0';
-                toast.parentNode.removeChild(toast);
-                butterup.options.currentToasts--;
-            }catch(e){
-                // toast is already gone, probably handled by maxToasts?
-            }
-            // if this was the last toast on the screen, remove the toaster
-            if(butterup.options.currentToasts == 0){
-                var toaster = document.getElementById('toaster');
-                toaster.parentNode.removeChild(toaster);
-            }
-        }, 500);
+        // does the toast exist?
+        if(toast != null){
+            toast.className += ' fadeOutToast';
+            setTimeout(function(){
+                // set the opacity to 0
+                try{
+                    toast.style.opacity = '0';
+                    toast.parentNode.removeChild(toast);
+                    butterup.options.currentToasts--;
+                }catch(e){
+                    // do nothing
+                }
+                // if this was the last toast on the screen, remove the toaster
+                if(butterup.options.currentToasts == 0){
+                    var toaster = document.getElementById('toaster');
+                    toaster.parentNode.removeChild(toaster);
+                }
+            }, 500);
+        }
+
     }
-}
+};
