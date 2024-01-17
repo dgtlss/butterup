@@ -163,10 +163,13 @@ var butterup = {
         toast.className += ' fadeOutToast';
         setTimeout(function(){
             // set the opacity to 0
-            toast.style.opacity = '0';
-            toast.parentNode.removeChild(toast);
-            butterup.options.currentToasts--;
-
+            try{
+                toast.style.opacity = '0';
+                toast.parentNode.removeChild(toast);
+                butterup.options.currentToasts--;
+            }catch(e){
+                // toast is already gone, probably handled by maxToasts?
+            }
             // if this was the last toast on the screen, remove the toaster
             if(butterup.options.currentToasts == 0){
                 var toaster = document.getElementById('toaster');
