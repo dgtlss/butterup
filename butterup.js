@@ -47,7 +47,7 @@ var butterup = {
         if(butterup.options.currentToasts >= butterup.options.maxToasts){
             // there are too many toasts on the screen, delete the oldest one
             var oldestToast = document.getElementById('butterupRack').firstChild;
-            removeChild(oldestToast);
+            document.getElementById('butterupRack').removeChild(oldestToast);
             butterup.options.currentToasts--;
         }
 
