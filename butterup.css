@@ -79,6 +79,19 @@ ol.rack li{
     margin-bottom: 16px;
 }
 
+/* Stacked Toasts Enabled */
+ol.rack.upperstack li{
+    margin-bottom: -35px;
+}
+
+ol.rack.lowerstack li{
+    margin-top: -35px;
+}
+
+ol.rack.lowerstack{
+   margin-bottom: 0px;
+}
+
 .butteruptoast{
     border-radius: 8px;
     box-shadow: 0 4px 12px #0000001a;
@@ -95,7 +108,6 @@ ol.rack li{
 
 .butteruptoast.dismissable{
     cursor: pointer;
-
 }
 
 .butteruptoast .icon{
@@ -219,7 +231,7 @@ ol.rack li{
     }
 }
 
-/*  Additional Styles 
+/*  Additional Styles
     These styles are an alternative to the standard option. A user can choose to use these
     styles by setting the theme: variable per toast
 */
@@ -309,6 +321,3 @@ ol.rack li{
     color: hsl(210, 100%, 27%);
     border: solid 2px hsl(210, 100%, 27%);
 }
-
-
-
