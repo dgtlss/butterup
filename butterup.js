@@ -3,7 +3,7 @@ var butterup = {
       maxToasts: 5, // Max number of toasts that can be on the screen at once
       toastLife: 35000, // How long a toast will stay on the screen before fading away
       currentToasts: 0, // Current number of toasts on the screen
-      stackedToasts: false, // Whether or not to stack toasts
+      stackedToasts: true, // Whether or not to stack toasts
   },
   toast:function({title, message, type, location, icon, theme, customIcon, dismissable}){
       /* Check if the toaster exists. If it doesn't, create it. If it does, check if there are too many toasts on the screen.

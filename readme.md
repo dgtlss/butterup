@@ -14,6 +14,3 @@ Butterup is proudly open source and is distributed under the MIT License. This m
 ## Contributing
 
 We welcome contributions from the community! If you have improvements or bug fixes, feel free to fork the repository, make your changes, and submit a pull request. Let's make this project better together!
-
-
-

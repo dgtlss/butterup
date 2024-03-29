@@ -82,10 +82,19 @@ ol.rack li{
 /* Stacked Toasts Enabled */
 ol.rack.upperstack li{
     margin-bottom: -35px;
+    transition: all 0.3s ease-in-out;
+}
+
+ol.rack.upperstack li:hover{
+    margin-bottom: 16px;
+    scale: 1.03;
+    transition: all 0.3s ease-in-out;
 }
 
 ol.rack.lowerstack li{
     margin-top: -35px;
+}
+    
 }
 
 ol.rack.lowerstack{
