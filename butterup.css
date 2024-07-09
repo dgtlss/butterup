@@ -94,8 +94,7 @@ ol.rack.upperstack li:hover{
 ol.rack.lowerstack li{
     margin-top: -35px;
 }
-    
-}
+
 
 ol.rack.lowerstack{
    margin-bottom: 0px;
@@ -105,7 +104,6 @@ ol.rack.lowerstack{
     border-radius: 8px;
     box-shadow: 0 4px 12px #0000001a;
     font-size: 13px;
-    align-items: center;
     display: flex;
     padding: 16px;
     border: 1px solid hsl(0, 0%, 93%);
@@ -121,7 +119,8 @@ ol.rack.lowerstack{
 
 .butteruptoast .icon{
     display: flex;
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
 }
 
 .butteruptoast .icon svg{
@@ -137,7 +136,7 @@ ol.rack.lowerstack{
 }
 
 .notif .desc .title{
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
 
 }
@@ -186,6 +185,86 @@ ol.rack.lowerstack{
     color: hsl(210, 100%, 27%);
     border: solid 1px hsl(210, 92%, 91%);
 }
+
+/* Buttons */
+.toast-buttons{
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+.toast-buttons .toast-button.primary{
+    background-color: #282828;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.toast-buttons .toast-button.secondary{
+    background-color: #f0f8ff;
+    color: hsl(210, 100%, 27%);
+    border: solid 1px hsl(210, 92%, 91%);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Success toast buttons */
+.butteruptoast.success .toast-button.primary {
+    background-color: hsl(145, 63%, 42%);
+    color: white;
+}
+
+.butteruptoast.success .toast-button.secondary {
+    background-color: hsl(145, 45%, 90%);
+    color: hsl(145, 63%, 32%);
+    border: solid 1px hsl(145, 63%, 72%);
+}
+
+/* Error toast buttons */
+.butteruptoast.error .toast-button.primary {
+    background-color: hsl(354, 70%, 54%);
+    color: white;
+}
+
+.butteruptoast.error .toast-button.secondary {
+    background-color: hsl(354, 30%, 90%);
+    color: hsl(354, 70%, 44%);
+    border: solid 1px hsl(354, 70%, 74%);
+}
+
+/* Warning toast buttons */
+.butteruptoast.warning .toast-button.primary {
+    background-color: hsl(45, 100%, 51%);
+    color: hsl(45, 100%, 15%);
+}
+
+.butteruptoast.warning .toast-button.secondary {
+    background-color: hsl(45, 100%, 96%);
+    color: hsl(45, 100%, 31%);
+    border: solid 1px hsl(45, 100%, 76%);
+}
+
+/* Info toast buttons */
+.butteruptoast.info .toast-button.primary {
+    background-color: hsl(207, 90%, 54%);
+    color: white;
+}
+
+.butteruptoast.info .toast-button.secondary {
+    background-color: hsl(207, 90%, 94%);
+    color: hsl(207, 90%, 34%);
+    border: solid 1px hsl(207, 90%, 74%);
+}
+
+
 
 
 /* Entrance animations */
