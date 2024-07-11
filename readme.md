@@ -7,7 +7,7 @@ This Vanilla JavaScript toast notification plugin is designed to seamlessly inte
 
 ## Documentation
 
-For full documentation, visit [butterup.nlanger.dev](https://butterup.nlanger.dev)
+For full documentation, visit [butteruptoast.com](https://butteruptoast.com)
 
 ## Licensing
 
