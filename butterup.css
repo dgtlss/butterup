@@ -11,6 +11,19 @@
     padding: 5px;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .toaster.bottom-right{
     bottom: 20px;
     right: 20px;
@@ -111,6 +124,7 @@ ol.rack.lowerstack{
     gap: 6px;
     color: #282828;
     width: 325px;
+    transition: all 0.3s ease-in-out;
 }
 
 .butteruptoast.dismissable{
